@@ -20,7 +20,7 @@
     <el-table-column label="操作">
       <template slot-scope="scope">
         <el-button
-          @click.native.prevent="deleteRow(scope.$index, tableData4)"
+          @click.native.prevent="deleteRow(scope.$index, tableData)"
           type="text"
           size="small">
           移除
@@ -59,6 +59,9 @@ export default {
   methods: {
     update () {
 
+    },
+    deleteRow (index, tableData) {
+      tableData.splice(index, 1)
     }
 
   }

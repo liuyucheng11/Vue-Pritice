@@ -21,6 +21,9 @@ export default new Router({
           component: TableDemo
         }
       ]
+    },
+    {
+      path: '/', redirect: '/user'
     }
   ]
 })
